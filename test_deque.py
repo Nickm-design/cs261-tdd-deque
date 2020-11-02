@@ -227,19 +227,19 @@ class TestDeque(unittest.TestCase):
         self.assertEqual('fi', d.dequeue_right())
         self.assertEqual('fee', d.dequeue_right())
 
-    # def test_dequeue_right_three_internal(self):
-    #     """
-    #     Dequeuing from the right of a three-element deque removes each dequeued
-    #     value from the internal dllist, in LIFO order.
-    #     """
-    #     d = Deque()
-    #     d.enqueue_right('fee')
-    #     d.enqueue_right('fi')
-    #     d.enqueue_right('fo')
-    #     _ = d.dequeue_right()
-    #     self.assertEqual('fee', d.data.first.value)
-    #     _ = d.dequeue_right()
-    #     self.assertEqual('fee', d.data.first.value)
+    def test_dequeue_right_three_internal(self):
+        """
+        Dequeuing from the right of a three-element deque removes each dequeued
+        value from the internal dllist, in LIFO order.
+        """
+        d = Deque()
+        d.enqueue_right('fee')
+        d.enqueue_right('fi')
+        d.enqueue_right('fo')
+        _ = d.dequeue_right()
+        self.assertEqual('fee', d.data.first.value)
+        _ = d.dequeue_right()
+        self.assertEqual('fee', d.data.first.value)
 
     # def test_enqueue_left_dequeue_right(self):
     #     """
