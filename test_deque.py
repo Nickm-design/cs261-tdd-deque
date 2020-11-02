@@ -182,16 +182,16 @@ class TestDeque(unittest.TestCase):
         d.enqueue_left('fee')
         self.assertEqual('fee', d.dequeue_right())
 
-    # def test_dequeue_right_one_internal(self):
-    #     """
-    #     Dequeuing from the right of a single-element deque removes it from the
-    #     internal dllist.
-    #     """
-    #     d = Deque()
-    #     d.enqueue_right('fee')
-    #     self.assertEqual(1, d.data.size)
-    #     _ = d.dequeue_right()
-    #     self.assertEqual(0, d.data.size)
+    def test_dequeue_right_one_internal(self):
+        """
+        Dequeuing from the right of a single-element deque removes it from the
+        internal dllist.
+        """
+        d = Deque()
+        d.enqueue_right('fee')
+        self.assertEqual(1, d.data.size)
+        _ = d.dequeue_right()
+        self.assertEqual(0, d.data.size)
 
     # def test_dequeue_right_two(self):
     #     """
