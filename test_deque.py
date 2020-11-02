@@ -203,16 +203,16 @@ class TestDeque(unittest.TestCase):
         d.enqueue_right('fi')
         self.assertEqual('fi', d.dequeue_right())
 
-    # def test_dequeue_right_two_internal(self):
-    #     """
-    #     Dequeuing from the right of a two-element deque removes the last
-    #     right-enqueued value from the dllist.
-    #     """
-    #     d = Deque()
-    #     d.enqueue_right('fee')
-    #     d.enqueue_right('fi')
-    #     _ = d.dequeue_right()
-    #     self.assertEqual('fee', d.data.first.value)
+    def test_dequeue_right_two_internal(self):
+        """
+        Dequeuing from the right of a two-element deque removes the last
+        right-enqueued value from the dllist.
+        """
+        d = Deque()
+        d.enqueue_right('fee')
+        d.enqueue_right('fi')
+        _ = d.dequeue_right()
+        self.assertEqual('fee', d.data.first.value)
 
     # def test_dequeue_right_three(self):
     #     """
