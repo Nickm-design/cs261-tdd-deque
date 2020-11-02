@@ -71,13 +71,13 @@ class TestDeque(unittest.TestCase):
         self.assertEqual('fee', d.data.last.value)
         self.assertEqual('fo', d.data.first.value)
 
-    # def test_enqueue_right_one_internal(self):
-    #     """
-    #     Enqueueing a 'right' value adds it to the beginning of the internal dllist.
-    #     """
-    #     d = Deque()
-    #     d.enqueue_right('fee')
-    #     self.assertEqual('fee', d.data.first.value)
+    def test_enqueue_right_one_internal(self):
+        """
+        Enqueueing a 'right' value adds it to the beginning of the internal dllist.
+        """
+        d = Deque()
+        d.enqueue_right('fee')
+        self.assertEqual('fee', d.data.first.value)
 
     # def test_enqueue_right_two_internal(self):
     #     """

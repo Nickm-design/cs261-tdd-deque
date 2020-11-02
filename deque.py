@@ -12,3 +12,6 @@ class Deque:
 
     def enqueue_left(self, value):
         self.data.appendleft(value)
+    
+    def enqueue_right(self, value):
+        self.data.appendright(value)
