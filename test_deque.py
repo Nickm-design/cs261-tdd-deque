@@ -28,13 +28,13 @@ class TestDeque(unittest.TestCase):
     Guiding enqueuing and dequeuing with internal storage
     """
 
-    # def test_has_doubly_linked_list_internal(self):
-    #     """
-    #     A deque has a data member, which is a dllist.
-    #     """
-    #     from llist import dllist # Hint: pip3 install llist
-    #     d = Deque()
-    #     self.assertEqual(dllist, type(d.data))
+    def test_has_doubly_linked_list_internal(self):
+        """
+        A deque has a data member, which is a dllist.
+        """
+        from llist import dllist # Hint: pip3 install llist
+        d = Deque()
+        self.assertEqual(dllist, type(d.data))
 
     # Hint: Once test_has_doubly_linked_list_internal passes, uncomment the import at
     #       the top of this file.

@@ -3,9 +3,9 @@
 # YOUR NAME
 
 # Hint: pip3 install llist
-# from llist import dllist
+from llist import dllist
 
 class Deque:
 
     def __init__(self):
-        pass
+        self.data = dllist()
