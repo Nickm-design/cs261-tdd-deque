@@ -59,17 +59,17 @@ class TestDeque(unittest.TestCase):
         self.assertEqual('fee', d.data.last.value)
         self.assertEqual('fi', d.data.first.value)
 
-    # def test_enqueue_left_three_internal(self):
-    #     """
-    #     Enqueueing three values results in the first enqueued value being the
-    #     last one in the list, and the third value being the first one in the list.
-    #     """
-    #     d = Deque()
-    #     d.enqueue_left('fee')
-    #     d.enqueue_left('fi')
-    #     d.enqueue_left('fo')
-    #     self.assertEqual('fee', d.data.last.value)
-    #     self.assertEqual('fo', d.data.first.value)
+    def test_enqueue_left_three_internal(self):
+        """
+        Enqueueing three values results in the first enqueued value being the
+        last one in the list, and the third value being the first one in the list.
+        """
+        d = Deque()
+        d.enqueue_left('fee')
+        d.enqueue_left('fi')
+        d.enqueue_left('fo')
+        self.assertEqual('fee', d.data.last.value)
+        self.assertEqual('fo', d.data.first.value)
 
     # def test_enqueue_right_one_internal(self):
     #     """
