@@ -124,15 +124,15 @@ class TestDeque(unittest.TestCase):
         _ = d.dequeue_left()
         self.assertEqual(0, d.data.size)
 
-    # def test_dequeue_left_two(self):
-    #     """
-    #     Dequeuing from the left of a two-element deque returns the last
-    #     left-enqueued value.
-    #     """
-    #     d = Deque()
-    #     d.enqueue_left('fee')
-    #     d.enqueue_left('fi')
-    #     self.assertEqual('fi', d.dequeue_left())
+    def test_dequeue_left_two(self):
+        """
+        Dequeuing from the left of a two-element deque returns the last
+        left-enqueued value.
+        """
+        d = Deque()
+        d.enqueue_left('fee')
+        d.enqueue_left('fi')
+        self.assertEqual('fi', d.dequeue_left())
 
     # def test_dequeue_left_two_internal(self):
     #     """
