@@ -103,15 +103,15 @@ class TestDeque(unittest.TestCase):
         self.assertEqual('fee', d.data.first.value)
         self.assertEqual('fo', d.data.last.value)
 
-    # def test_dequeue_left_one(self):
-    #     """
-    #     Dequeuing from the left of a single-element deque returns the single value.
-    #     """
-    #     d = Deque()
-    #     d.enqueue_left('fee')
-    #     self.assertEqual('fee', d.dequeue_left())
-    #     d.enqueue_right('fee')
-    #     self.assertEqual('fee', d.dequeue_left())
+    def test_dequeue_left_one(self):
+        """
+        Dequeuing from the left of a single-element deque returns the single value.
+        """
+        d = Deque()
+        d.enqueue_left('fee')
+        self.assertEqual('fee', d.dequeue_left())
+        d.enqueue_right('fee')
+        self.assertEqual('fee', d.dequeue_left())
 
     # def test_dequeue_left_one_internal(self):
     #     """
