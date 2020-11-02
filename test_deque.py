@@ -6,7 +6,7 @@ import time
 from deque import Deque
 
 # Hint: Once test_has_doubly_linked_list_internal passes, uncomment this line.
-# from llist import dllist
+from llist import dllist
 
 
 class TestDeque(unittest.TestCase):
@@ -39,13 +39,13 @@ class TestDeque(unittest.TestCase):
     # Hint: Once test_has_doubly_linked_list_internal passes, uncomment the import at
     #       the top of this file.
 
-    # def test_enqueue_left_one_internal(self):
-    #     """
-    #     Enqueueing a 'left' value adds it to the beginning of the internal dllist.
-    #     """
-    #     d = Deque()
-    #     d.enqueue_left('fee')
-    #     self.assertEqual('fee', d.data.first.value)
+    def test_enqueue_left_one_internal(self):
+        """
+        Enqueueing a 'left' value adds it to the beginning of the internal dllist.
+        """
+        d = Deque()
+        d.enqueue_left('fee')
+        self.assertEqual('fee', d.data.first.value)
 
     # def test_enqueue_left_two_internal(self):
     #     """
