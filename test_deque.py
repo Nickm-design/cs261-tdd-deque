@@ -193,15 +193,15 @@ class TestDeque(unittest.TestCase):
         _ = d.dequeue_right()
         self.assertEqual(0, d.data.size)
 
-    # def test_dequeue_right_two(self):
-    #     """
-    #     Dequeuing from the right of a two-element deque returns the last
-    #     right-enqueued value.
-    #     """
-    #     d = Deque()
-    #     d.enqueue_right('fee')
-    #     d.enqueue_right('fi')
-    #     self.assertEqual('fi', d.dequeue_right())
+    def test_dequeue_right_two(self):
+        """
+        Dequeuing from the right of a two-element deque returns the last
+        right-enqueued value.
+        """
+        d = Deque()
+        d.enqueue_right('fee')
+        d.enqueue_right('fi')
+        self.assertEqual('fi', d.dequeue_right())
 
     # def test_dequeue_right_two_internal(self):
     #     """
