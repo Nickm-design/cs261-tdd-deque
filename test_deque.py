@@ -254,18 +254,18 @@ class TestDeque(unittest.TestCase):
         self.assertEqual('fi', d.dequeue_right())
         self.assertEqual('fo', d.dequeue_right())
 
-    # def test_enqueue_left_dequeue_right(self):
-    #     """
-    #     Dequeuing from the right of a three-element deque returns each
-    #     left-enqueued value in FIFO order.
-    #     """
-    #     d = Deque()
-    #     d.enqueue_right('fee')
-    #     d.enqueue_right('fi')
-    #     d.enqueue_right('fo')
-    #     self.assertEqual('fee', d.dequeue_left())
-    #     self.assertEqual('fi', d.dequeue_left())
-    #     self.assertEqual('fo', d.dequeue_left())
+    def test_enqueue_left_dequeue_right(self):
+        """
+        Dequeuing from the right of a three-element deque returns each
+        left-enqueued value in FIFO order.
+        """
+        d = Deque()
+        d.enqueue_right('fee')
+        d.enqueue_right('fi')
+        d.enqueue_right('fo')
+        self.assertEqual('fee', d.dequeue_left())
+        self.assertEqual('fi', d.dequeue_left())
+        self.assertEqual('fo', d.dequeue_left())
 
 
     """
